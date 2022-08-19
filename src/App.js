@@ -1,16 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Component } from "react";
+import Customer from "./components/Customer";
 
-function App() {
-  return (
-    <div className="App gray-background">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Let's develop management System!!!@@@</h2>
-        <h3>!!!</h3>
-      </header>
-    </div>
-  );
+const customers = [
+  {
+    id: 1,
+    image: "https://placeimg.com/64/64/4",
+    name: "자자자",
+    birthday: "11111",
+    gender: "남",
+    job: "11111",
+  },
+  {
+    id: 2,
+    image: "https://placeimg.com/64/64/5",
+    name: "자자자",
+    birthday: "22222",
+    gender: "남",
+    job: "12",
+  },
+  {
+    id: 3,
+    image: "https://placeimg.com/64/64/8",
+    name: "자자자",
+    birthday: "3333",
+    gender: "남",
+    job: "555",
+  },
+];
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        {customers.map((c) => {
+          return (
+            <Customer
+              key={c.id}
+              id={c.id}
+              image={c.image}
+              name={c.name}
+              birthday={c.birthday}
+              gender={c.gender}
+              job={c.job}
+            />
+          );
+        })}
+      </div>
+    );
+  }
 }
 
 export default App;
