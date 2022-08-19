@@ -6,7 +6,7 @@ function App() {
     <div className="App gray-background">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Let's develop management System!</h2>
+        <h2>Let's develop management System!</h2> 
       </header>
     </div>
   );
