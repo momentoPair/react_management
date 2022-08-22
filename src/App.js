@@ -5,11 +5,11 @@ import Customer from "./components/Customer";
 const customers = [
   {
     id: 1,
-    image: "https://placeimg.com/64/64/4",
+    image: "https://placeimg.com/64/64/any",
     name: "자자자",
     birthday: "11111",
     gender: "남",
-    job: "11111",
+    job: "job1",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const customers = [
     name: "자자자",
     birthday: "22222",
     gender: "남",
-    job: "12",
+    job: "job2",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const customers = [
     name: "자자자",
     birthday: "3333",
     gender: "남",
-    job: "555",
+    job: "job3",
   },
 ];
 
@@ -36,6 +36,7 @@ class App extends Component {
         {customers.map((c) => {
           return (
             <Customer
+              key={c.id}
               id={c.id}
               image={c.image}
               name={c.name}
